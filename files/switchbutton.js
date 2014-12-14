@@ -20,7 +20,7 @@
             onComplete: function () { }
         }, options);
 
-        $(this).filter('input[type="checkbox"]').each(function (e)
+        return $(this).filter('input[type="checkbox"]').each(function (e)
         {
 
             $(this).css('display', 'none');
@@ -40,24 +40,24 @@
             {
                 $(this).after('<div class="Switch ' + label[1] + '"><div class="Toggle"></div><span class="' + label[0] + ' Off">' + settings.onLabel + '</span><span class="' + label[2] + ' On">' + settings.offLabel + '</span></div>');
             }
+				
+			$(this).nextAll('.Switch').filter(':first').on('click',function ()
+			{
+				$(this).toggleClass('On').toggleClass('Off');
+				$(this).prev('span').toggleClass('SwitchLabelOn').toggleClass('SwitchLabelOff');
+				$(this).next('span').toggleClass('SwitchLabelOn').toggleClass('SwitchLabelOff');
+
+				SwitchBox = $(this).prevAll('input[type="checkbox"]').filter(':last');
+				SwitchBox.prop('checked', !SwitchBox.prop('checked'));
+
+				if (typeof (settings.onComplete) === "function")
+				{
+					settings.onComplete.call(this);
+				}
+			});
 
         });
-
-        $(document).on('click', '.Switch', function ()
-        {
-            $(this).toggleClass('On').toggleClass('Off');
-            $(this).prev('span').toggleClass('SwitchLabelOn').toggleClass('SwitchLabelOff');
-            $(this).next('span').toggleClass('SwitchLabelOn').toggleClass('SwitchLabelOff');
-
-            SwitchBox = $(this).prevAll('input[type="checkbox"]').filter(':last');
-            SwitchBox.prop('checked', !SwitchBox.prop('checked'));
-
-            if (typeof (settings.onComplete) === "function")
-            {
-                settings.onComplete.call(this);
-            }
-        });
-
     };
+
 
 })(jQuery);
