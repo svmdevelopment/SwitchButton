@@ -8,8 +8,10 @@
 
   <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
   <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <link rel="stylesheet" href="https://rawgit.com/svmdevelopment/SwitchButton/master/files/switchbutton.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/script.js"></script>
+  <script type="text/javascript" src="https://rawgit.com/svmdevelopment/SwitchButton/master/files/switchbutton.js"></script>
 
   <title>SwitchButton</title>
   <meta name="description" content="A small (inline) switch with textlabels that replaces a checkbox. Mainly written in CSS and brought together in a lightweight jQuery plugin.">
@@ -93,7 +95,42 @@ Then apply the plugin to one or more checkboxes on your webpage:</p>
 </tr>
 </table>
 
-<p>Example: <code>$("#myCheckbox").SwitchCheckbox({onLabel: 'YES', offLabel: 'NO', onComplete: callbackFunction });</code></p>
+<p><strong>Example:</strong></p>
+<pre style="font-size:9pt"><span style='color:#d2cd86; '>&lt;</span>script type<span style='color:#d2cd86; '>=</span><span style='color:#02d045; '>"</span><span style='color:#00c4c4; '>text/javascript</span><span style='color:#02d045; '>"</span> src<span style='color:#d2cd86; '>=</span><span style='color:#02d045; '>"</span><span style='color:#00c4c4; '>switchbutton.js</span><span style='color:#02d045; '>"</span> <span style='color:#d2cd86; '>/</span><span style='color:#d2cd86; '>></span>
+<span style='color:#d2cd86; '>&lt;</span><span style='color:#e66170; font-weight:bold; '>link</span> rel<span style='color:#d2cd86; '>=</span><span style='color:#02d045; '>"</span><span style='color:#00c4c4; '>stylesheet</span><span style='color:#02d045; '>"</span> type<span style='color:#d2cd86; '>=</span><span style='color:#02d045; '>"</span><span style='color:#00c4c4; '>text/css</span><span style='color:#02d045; '>"</span> href<span style='color:#d2cd86; '>=</span><span style='color:#02d045; '>"</span><span style='color:#00c4c4; '>switchbutton.css</span><span style='color:#02d045; '>"</span> <span style='color:#d2cd86; '>/</span><span style='color:#d2cd86; '>></span>
+
+<span style='color:#d2cd86; '>&lt;</span>p<span style='color:#d2cd86; '>></span>The small inline version <span style='color:#d2cd86; '>&lt;</span>input type<span style='color:#d2cd86; '>=</span><span style='color:#02d045; '>"</span><span style='color:#00c4c4; '>checkbox</span><span style='color:#02d045; '>"</span> id<span style='color:#d2cd86; '>=</span><span style='color:#02d045; '>"</span><span style='color:#00c4c4; '>myCheckbox</span><span style='color:#02d045; '>"</span> <span style='color:#d2cd86; '>/</span><span style='color:#d2cd86; '>></span> of the checkbox<span style='color:#d2cd86; '>&lt;</span><span style='color:#d2cd86; '>/</span>p<span style='color:#d2cd86; '>></span>
+<span style='color:#d2cd86; '>&lt;</span>p<span style='color:#d2cd86; '>></span>And the bigger button<span style='color:#b060b0; '>:</span><span style='color:#d2cd86; '>&lt;</span><span style='color:#d2cd86; '>/</span>p<span style='color:#d2cd86; '>></span>
+<span style='color:#d2cd86; '>&lt;</span>input type<span style='color:#d2cd86; '>=</span><span style='color:#02d045; '>"</span><span style='color:#00c4c4; '>checkbox</span><span style='color:#02d045; '>"</span> id<span style='color:#d2cd86; '>=</span><span style='color:#02d045; '>"</span><span style='color:#00c4c4; '>myCheckbig</span><span style='color:#02d045; '>"</span> <span style='color:#e66170; font-weight:bold; '>checked</span> <span style='color:#d2cd86; '>/</span><span style='color:#d2cd86; '>></span>
+
+<span style='color:#d2cd86; '>&lt;</span>script<span style='color:#d2cd86; '>></span>
+$<span style='color:#d2cd86; '>(</span><span style='color:#e66170; font-weight:bold; '>function</span> <span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+&nbsp;$<span style='color:#d2cd86; '>(</span><span style='color:#02d045; '>"</span><span style='color:#00c4c4; '>#myCheckbox</span><span style='color:#02d045; '>"</span><span style='color:#d2cd86; '>)</span><span style='color:#d2cd86; '>.</span>SwitchCheckbox<span style='color:#d2cd86; '>(</span><span style='color:#b060b0; '>{</span> onLabel<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'YES'</span><span style='color:#d2cd86; '>,</span> offLabel<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'NO'</span> <span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+&nbsp;$<span style='color:#d2cd86; '>(</span><span style='color:#02d045; '>"</span><span style='color:#00c4c4; '>#myCheckbig</span><span style='color:#02d045; '>"</span><span style='color:#d2cd86; '>)</span><span style='color:#d2cd86; '>.</span>SwitchCheckbox<span style='color:#d2cd86; '>(</span><span style='color:#b060b0; '>{</span> type<span style='color:#b060b0; '>:</span> <span style='color:#00c4c4; '>'box'</span><span style='color:#d2cd86; '>,</span> onComplete<span style='color:#b060b0; '>:</span> myFunction <span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+<span style='color:#b060b0; '>}</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+
+<span style='color:#e66170; font-weight:bold; '>function</span> myFunction <span style='color:#d2cd86; '>(</span><span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+	alert<span style='color:#d2cd86; '>(</span><span style='color:#00c4c4; '>'You toggled the switch!'</span><span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>;</span>
+<span style='color:#b060b0; '>}</span>
+<span style='color:#d2cd86; '>&lt;</span><span style='color:#d2cd86; '>/</span>script<span style='color:#d2cd86; '>></span></pre>
+	
+<u>Result:</u>
+
+<p>The small inline version <input type="checkbox" id="myCheckbox" /> of the checkbox</p>
+<p>And the bigger button:</p>
+<input type="checkbox" id="myCheckbig" checked />
+
+<script>
+$(function () {
+  $("#myCheckbox").SwitchCheckbox({ onLabel: 'YES', offLabel: 'NO' });
+  $("#myCheckbig").SwitchCheckbox({ type: 'box', onComplete: myFunction });
+});
+
+function myFunction () {
+	alert('You toggled the switch!');
+}
+</script>
+
         </article>
       </div>
     </div>
