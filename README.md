@@ -1,7 +1,7 @@
-SwitchCheckbox
+SwitchButton
 ==============
 
-A small (inline) switch with textlabels that replaces a checkbox. Mainly written in CSS and brought together in a lightweight jQuery plugin.
+A small (inline) switch with textlabels that replaces a checkbox. Mainly written in CSS and brought together in a lightweight jQuery plugin. For an example visit <a href="http://svmdevelopment.github.io/SwitchButton/">the demo page</a>.
 
 
 <strong>How to use:</strong>
