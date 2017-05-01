@@ -52,7 +52,7 @@
 
 				if (typeof (settings.onComplete) === "function")
 				{
-					settings.onComplete.call(this);
+					settings.onComplete.call(SwitchBox);
 				}
 			});
 
